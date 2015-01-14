@@ -1,4 +1,4 @@
-It's ImagePicker which implements the effect and UI like Tumblr app. 
+It's  a Image Picker which implements the effect and UI like Tumblr app. 
 
 And it also provides content for Intent.ACTION_GET_CONTENT, which means other Apps can use it as ImagePicker.
 
@@ -27,3 +27,7 @@ And as result, it returns image uris which you selected in Intent, and you can g
         super.onActivityResult(requestCode, resultCode, data);
         List<Uri> uriList = data.getParcelableArrayListExtra("uris");
     }
+
+##Demo
+
+![](http://laowch.github.io/images/image_picker.gif)
