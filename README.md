@@ -4,8 +4,9 @@ And it also provides content for Intent.ACTION_GET_CONTENT, which means other Ap
 
 To use it as ImagePicker, you can add code like this :
 
-    // choose image button click
-    public void onClick(View v) {
+    // choose image button clicked
+    @Override
+    public void onClick(View view) {
        final Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
         // If I remove this line, the Google+ Photos will be opened prior.
         // It works well after I uninstalled Google+, but disable Google+ doesn't work.
@@ -19,6 +20,8 @@ To use it as ImagePicker, you can add code like this :
 
 
 And as result, it returns image uris which you selected in Intent, and you can get the List<Uri> like this:
+
+    // activity result
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
